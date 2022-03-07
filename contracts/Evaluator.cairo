@@ -448,7 +448,7 @@ func ex7_add_metadata{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_ch
 	# Retrieve dummy token address
 	let (dummy_metadata_erc721_address) = dummy_metadata_erc721_storage.read()
 	# Reading metadata URI for token 1 on both contracts. For these to show up in Oasis, they should be equal 
-	let token_id = Uint256(0,1)
+	let token_id = Uint256(1,0)
 	let (metadata_player_len, metadata_player) = IERC721_metadata.tokenURI(contract_address = submited_exercise_address, token_id = token_id)
 	let (metadata_dummy_len, metadata_dummy) = IERC721_metadata.tokenURI(contract_address = dummy_metadata_erc721_address, token_id = token_id)
 	# Verifying they are equal
